@@ -10,15 +10,15 @@ var time = 0,
     lastY;
 
 var MAX_OFFSET = 300; //konusno / konveksno
-var SPACING = 0.1; // RESOLUTION
+var SPACING = 1; // RESOLUTION
 // var SPACING = 0.2;
 var POINTS = MAX_OFFSET / SPACING;
 var PEAK = MAX_OFFSET * 0.25; //BRDO U SREDINI
-var POINTS_PER_LAP = 1;
+var POINTS_PER_LAP = -2;
 var SHADOW_STRENGTH = 12;
 
 function startline(){
-    POINTS_PER_LAP -= 0.01;
+    POINTS_PER_LAP -= 0.02;
     console.log(POINTS_PER_LAP);
     if(POINTS_PER_LAP < -30){
       clearInterval(lineInterval)
@@ -26,7 +26,7 @@ function startline(){
     }
 }
 
-var lineInterval = setInterval(startline, 40)
+var lineInterval = setInterval(startline, 50)
 
 setup();
 
