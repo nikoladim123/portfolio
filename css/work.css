@@ -1,0 +1,104 @@
+.nav-items-right a:nth-child(2) {
+  text-shadow: 0 0 0.5vw #fff, 0 0 1vw rgb(255 255 255 / 30%), 0 0 1vw rgb(255 255 255 / 3%), 0 0 0.5vw #e60073, 0 0 60px #e60073;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  grid-auto-rows: 10vw;
+  grid-auto-flow: dense;
+  grid-gap: 5px;
+}
+
+.gridContainer {
+  position: relative;
+}
+
+.gridContainer img {
+  width: 100%;
+  scale: 1;
+  transition: 0.3s;
+}
+
+.gridContainer a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.gridContainer>div {
+  background: red;
+  overflow: hidden;
+}
+
+.gridContainer>div h3 {
+  margin: 0;
+  color: white;
+  font-size: 5vw;
+  font-weight: 100;
+  text-align: center;
+}
+
+.g1 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.g2 {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+
+.g2 img {
+  position: relative;
+  left: -50%;
+  height: 100%;
+  width: auto;
+}
+
+.g3 {
+  grid-row: span 1;
+  grid-column: span 2;
+}
+
+.g3 img {
+  position: relative;
+  top: -50%;
+}
+
+.g4 {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.g4 h3, .g2 h3{
+  font-size: 2.8vw !important;
+}
+
+.overlayZ {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.gridContainer>div:hover .overlayZ {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  box-shadow: -1px -2px 5vw 3vw rgb(0 0 0 / 75%);
+  top: 5%;
+}
+
+.gridContainer>div:hover img {
+  scale: 1.2;
+  transition: 10s;
+}
