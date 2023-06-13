@@ -7,8 +7,9 @@ body {
   margin: 0;
   background-color: #111;
   font-family: Montserrat;
-  background: linear-gradient(to bottom, #121 0%,#000 30%);
+  background: linear-gradient(to bottom, #121 0%,#000 20%);
   min-height: 100vh;
+  box-shadow: inset -15px 0px 2vw 0vw rgba(17, 34, 17,1);
 }
 
 /* nav start */
@@ -84,3 +85,10 @@ nav {
 }
 
 /* nav end */
+
+/* footer start */
+footer{
+  min-height: 10vw;
+  /* background: linear-gradient(to top, #121 0%,#000 100%); */
+}
+/* footer end */
