@@ -10,11 +10,11 @@ var time = 0,
     lastY;
 
 var MAX_OFFSET = 300; //konusno / konveksno
-var SPACING = 1; // RESOLUTION
+var SPACING = 2; // RESOLUTION
 // var SPACING = 0.2;
 var POINTS = MAX_OFFSET / SPACING;
 var PEAK = MAX_OFFSET * 0.25; //BRDO U SREDINI
-var POINTS_PER_LAP = -2;
+var POINTS_PER_LAP = -8;
 var SHADOW_STRENGTH = 12;
 
 function startline(){
@@ -26,7 +26,7 @@ function startline(){
     }
 }
 
-var lineInterval = setInterval(startline, 50)
+var lineInterval = setInterval(startline, 150)
 
 setup();
 
@@ -111,70 +111,5 @@ function render() {
 
 }
 
-function onMouseDown( event ) {
-
-  lastX = event.clientX;
-  lastY = event.clientY;
-
-  document.addEventListener( 'mousemove', onMouseMove );
-  document.addEventListener( 'mouseup', onMouseUp );
-
-}
-
-function onMouseMove( event ) {
-
-  var vx = ( event.clientX - lastX ) / 100;
-  var vy = ( event.clientY - lastY ) / 100;
-
-  if( event.clientY < height/2 ) vx *= -1;
-  if( event.clientX > width/2 ) vy *= -1;
-
-  velocityTarget = vx + vy;
-
-  lastX = event.clientX;
-  lastY = event.clientY;
-
-}
-
-function onMouseUp( event ) {
-
-  document.removeEventListener( 'mousemove', onMouseMove );
-  document.removeEventListener( 'mouseup', onMouseUp );
-
-}
-
-function onTouchStart( event ) {
-
-  event.preventDefault();
-
-  lastX = event.touches[0].clientX;
-  lastY = event.touches[0].clientY;
-
-  document.addEventListener( 'touchmove', onTouchMove );
-  document.addEventListener( 'touchend', onTouchEnd );
-
-}
-
-function onTouchMove( event ) {
-
-  var vx = ( event.touches[0].clientX - lastX ) / 100;
-  var vy = ( event.touches[0].clientY - lastY ) / 100;
-
-  if( event.touches[0].clientY < height/2 ) vx *= -1;
-  if( event.touches[0].clientX > width/2 ) vy *= -1;
-
-  velocityTarget = vx + vy;
-
-  lastX = event.touches[0].clientX;
-  lastY = event.touches[0].clientY;
-
-}
-
-function onTouchEnd( event ) {
-
-  document.removeEventListener( 'touchmove', onTouchMove );
-  document.removeEventListener( 'touchend', onTouchEnd );
-
-}
 
 console.log(123)
