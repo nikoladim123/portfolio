@@ -300,3 +300,13 @@ main h2 {
 }
 
 /* recentProjects end */
+/* MOBILE */
+@media (orientation: portrait), (max-width: 1250px) {
+  .canvasBanner {
+    top: -19vw;
+    left: -4vw;
+  }
+  main{
+    margin-top: -50vw;
+  }
+}
