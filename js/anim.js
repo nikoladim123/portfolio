@@ -19,14 +19,14 @@ var SHADOW_STRENGTH = 12;
 
 function startline(){
     POINTS_PER_LAP -= 0.02;
-    console.log(POINTS_PER_LAP);
+    // console.log(POINTS_PER_LAP);
     if(POINTS_PER_LAP < -30){
       clearInterval(lineInterval)
       console.log("done " + POINTS_PER_LAP);
     }
 }
 
-var lineInterval = setInterval(startline, 150)
+var lineInterval = setInterval(startline, 350)
 
 setup();
 
@@ -36,8 +36,8 @@ function setup() {
   step();
 
   window.addEventListener( 'resize', resize );
-  window.addEventListener( 'mousedown', onMouseDown );
-  document.addEventListener( 'touchstart', onTouchStart );
+  // window.addEventListener( 'mousedown', onMouseDown );
+  // document.addEventListener( 'touchstart', onTouchStart );
 
 }
 
