@@ -1,9 +1,10 @@
 @font-face {
   font-family: Montserrat;
-  src: url("./fonts/Montserrat/Montserrat-VariableFont-wght.ttf");
+  src: url("../fonts/Montserrat/Montserrat-VariableFont-wght.ttf");
 }
 
 body {
+  font-family: Montserrat;
   margin: 0;
   background-color: #111;
   font-family: Montserrat;
