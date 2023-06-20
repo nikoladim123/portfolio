@@ -1,19 +1,18 @@
-
-.canvasBanner{
+.canvasBanner {
   max-width: 100%;
   position: relative;
   top: -3.5vw;
 }
 
-main{
-    position: relative;
-    /* background: black; */
+main {
+  position: relative;
+  /* background: black; */
 }
 
-main h2{
+main h2 {
   text-align: center;
   color: black;
-  text-shadow: 0vw 0vw 0.6vw rgba(255,255,255,05);
+  text-shadow: 0vw 0vw 0.6vw rgba(255, 255, 255, 05);
   font-size: 5vw;
   position: absolute;
   top: -3vw;
@@ -22,9 +21,8 @@ main h2{
   margin: 0;
 }
 
-
 /* recentProjects start */
-.recentProjects{
+.recentProjects {
   width: 100%;
   /* overflow: hidden; */
   /* overflow-x: hidden; */
@@ -36,7 +34,7 @@ main h2{
   position: relative;
 }
 
-.recentProjectsTextBox{
+.recentProjectsTextBox {
   /* border: 1px solid red; */
   position: relative;
   z-index: 2;
@@ -47,7 +45,8 @@ main h2{
   top: -7vw;
   padding-right: 7vw;
 }
-.recentProjectsTextBox h2{
+
+.recentProjectsTextBox h2 {
   font-size: 33.8655vw;
   color: white;
   font-family: 'Gorgeous-Bold.ttf';
@@ -59,7 +58,8 @@ main h2{
   top: 7vw;
   transition: 1s ease;
 }
-.recentProjectsTextBox h3{
+
+.recentProjectsTextBox h3 {
   font-size: 9.67585vw;
   color: #33343b;
   /* color: red; */
@@ -73,7 +73,7 @@ main h2{
   letter-spacing: 0.4vw;
 }
 
-.recProjContainer{
+.recProjContainer {
   position: relative;
   /* border: 1px solid black; */
   display: flex;
@@ -83,21 +83,29 @@ main h2{
   padding-top: 15vw;
   padding-bottom: 14vw;
 }
-.recProjBoxContainer:nth-child(1){
-  transform-origin: left;
-}
-.recProjBoxContainer:nth-child(2){
+
+.recProjContainer a:nth-child(2) .recProjBoxContainer {
   transform-origin: right;
 }
-.recProjBoxContainer{
+
+.recProjContainer a:nth-child(3) .recProjBoxContainer {
+  transform-origin: center;
+}
+
+.recProjBoxContainer {
+  position: relative;
   transition: all 0.5s ease;
+  opacity: 0.7;
   /* border: 1px solid red; */
 }
-.recProjBoxContainer:hover{
+
+.recProjBoxContainer:hover {
   transform: scale(1.2);
   z-index: 1;
+  opacity: 1;
 }
-.recProjImageBox{
+
+.recProjImageBox {
   position: relative;
   width: 36.28447vw;
   height: 36.28447vw;
@@ -107,45 +115,51 @@ main h2{
   transform: rotate(45deg);
   overflow: hidden;
 }
-.recProjImageBox::before{
+
+.recProjImageBox::before {
   content: '';
   display: block;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
   width: 20%;
   height: 180%;
   top: 1px;
   bottom: 1px;
   /* opacity: 0.2;  */
-  top:-120%;
+  top: -120%;
   left: 10%;
   transition: 2s;
   transform: rotate(45deg);
   z-index: 5;
   pointer-events: none;
 }
-.recProjImageBox:hover:before{
-  top:100%;
-  left:100%;
+
+.recProjImageBox:hover:before {
+  top: 100%;
+  left: 100%;
 }
-.recProjImageBox:nth-child(3){
+
+.recProjImageBox:nth-child(3) {
   margin-top: -5vw;
 }
-.recProjImageBox:hover{
+
+.recProjImageBox:hover {
   z-index: 1;
 }
-.recProjImageBox img:hover{
+
+.recProjImageBox img:hover {
   cursor: pointer;
   transform: scale(1.2);
 }
-.recProjImageBox img{
+
+.recProjImageBox img {
   position: relative;
   transition: all 0.5s ease;
   width: 100%;
   /* transition: rot; */
 }
 
-.poUpCarContainer{
+.poUpCarContainer {
   z-index: 6;
   /* border: 1px solid yellow; */
   position: fixed;
@@ -161,17 +175,20 @@ main h2{
   align-items: center;
   background: gray;
 }
-.poUpImg{
+
+.poUpImg {
   max-width: 100%;
   /* min-height: 100%; */
   height: fit-content;
   /* object-fit: contain; */
 }
-.popUpLeftArrowBox{
+
+.popUpLeftArrowBox {
   transform: skewX(10deg);
   transform: rotate(55.5deg);
 }
-.popUpLeftArrow{
+
+.popUpLeftArrow {
   width: 4.116vw;
   height: 4.116vw;
   /* transform: rotate(45deg); */
@@ -181,21 +198,24 @@ main h2{
   transition: 0.5s ease;
   opacity: 0.27;
 }
-.popUpLeft:hover .popUpLeftArrow{
+
+.popUpLeft:hover .popUpLeftArrow {
   opacity: 0.57;
 }
 
-.popUpRight:hover .popUpLeftArrow{
+.popUpRight:hover .popUpLeftArrow {
   opacity: 0.57;
 }
-.rightPopArrow{
+
+.rightPopArrow {
   transform: rotate(-126deg);
   position: relative;
   top: -1vw;
 }
-.popUpLeft{
+
+.popUpLeft {
   transition: 0.5s ease;
-  background: rgba(255,255,255,0.22);
+  background: rgba(255, 255, 255, 0.22);
   height: 100%;
   width: 7.26744vw;
   position: absolute;
@@ -206,10 +226,11 @@ main h2{
   align-items: center;
   justify-content: center;
 }
-.popUpRight{
+
+.popUpRight {
   cursor: pointer;
   transition: 0.5s ease;
-  background: rgba(255,255,255,0.22);
+  background: rgba(255, 255, 255, 0.22);
   height: 100%;
   width: 7.26744vw;
   position: absolute;
@@ -219,23 +240,27 @@ main h2{
   align-items: center;
   justify-content: center;
 }
+
 .popUpLeft:hover,
-.popUpRight:hover{
-  background: rgba(255,255,255,0.4);
+.popUpRight:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
+
 .popUpLeft:hover p,
-.popUpRight:hover p{
+.popUpRight:hover p {
   opacity: 0.45;
 }
+
 .popUpLeft p,
-.popUpRight p{
+.popUpRight p {
   font-size: 4vw;
-  transform: scale(1,4);
+  transform: scale(1, 4);
   font-weight: 100;
   transition: 0.5s ease;
   opacity: 0.27;
 }
-.popUpCloseBox{
+
+.popUpCloseBox {
   cursor: pointer;
   width: 7.26744vw;
   height: 7.26744vw;
@@ -248,9 +273,11 @@ main h2{
   font-family: 'Roboto-Thin.ttf';
   color: #3c3c3b;
 }
-.popUpCloseBox:hover p{
+
+.popUpCloseBox:hover p {
   opacity: 0.45;
 }
+
 .popUpCloseBox p {
   transition: 0.5s ease;
   font-size: 6vw;
@@ -259,7 +286,8 @@ main h2{
   pointer-events: none;
   user-select: none;
 }
-.popUpOverlay{
+
+.popUpOverlay {
   pointer-events: none;
   width: 100%;
   height: 100%;
@@ -270,4 +298,5 @@ main h2{
   transition: 0.15s;
   opacity: 0;
 }
+
 /* recentProjects end */
