@@ -26,7 +26,7 @@ function startline(){
     }
 }
 
-var lineInterval = setInterval(startline, 150)
+var lineInterval = setInterval(startline, 200)
 
 setup();
 
